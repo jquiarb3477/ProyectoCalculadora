@@ -14,4 +14,12 @@ public class Calculadora {
     public int multiplicar() {
         return this.num1 * this.num2;
     }
+
+    public double dividir() {
+        if (this.num2 != 0) {
+            return (double) this.num1 / this.num2;
+        } else {
+            throw new IllegalArgumentException("Divisor cannot be zero");
+        }
+    }
 }
