@@ -11,7 +11,7 @@ public class Calculadora {
         return this.num1 + this.num2;
     }
 
-<<<<<<< HEAD
+
     public int resta() {
         return this.num1 - this.num2;
     }
@@ -22,7 +22,6 @@ public class Calculadora {
         System.out.println(calc.suma());
     }
 }
-=======
     public int multiplicar() {
         return this.num1 * this.num2;
     }
@@ -34,5 +33,4 @@ public class Calculadora {
             throw new IllegalArgumentException("Divisor cannot be zero");
         }
     }
->>>>>>> dividir
 }
