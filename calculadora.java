@@ -1,6 +1,6 @@
 public class Calculadora {
-    Private int num1;
-    Private int num2;
+    private int num1;
+    private int num2;
 
     public Calculadora(int num1, int num2) {
         this.num1 = num1;
@@ -11,6 +11,7 @@ public class Calculadora {
         return this.num1 + this.num2;
     }
 
+<<<<<<< HEAD
     public int resta() {
         return this.num1 - this.num2;
     }
@@ -21,4 +22,17 @@ public class Calculadora {
         System.out.println(calc.suma());
     }
 }
+=======
+    public int multiplicar() {
+        return this.num1 * this.num2;
+    }
+
+    public double dividir() {
+        if (this.num2 != 0) {
+            return (double) this.num1 / this.num2;
+        } else {
+            throw new IllegalArgumentException("Divisor cannot be zero");
+        }
+    }
+>>>>>>> dividir
 }
