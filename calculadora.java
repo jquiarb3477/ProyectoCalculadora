@@ -1,36 +1,88 @@
+/*
+ * This is a class that performs basic operations.
+ * @param numero1 The first number of the operation.
+ * @param numero2 The second number of the operation.
+ * @param operacion The operation to be performed.
+ * @return The result of the operation.
+ * @see Calculadora
+ * @msuabar049
+ */
 public class Calculadora {
-    private int num1;
-    private int num2;
-
-    public Calculadora(int num1, int num2) {
-        this.num1 = num1;
-        this.num2 = num2;
+    private int numero1;
+    private int numero2;
+    private double resultado;
+    private String operacion;
+    
+    /* 
+     * This is the constructor of the class.
+     * @param numero1 The first number of the operation.
+     * @param numero2 The second number of the operation.
+     * @param operacion The operation to be performed.
+     * @see Calculadora
+     * @msuabar049
+    */
+    public Calculadora(int numero1, int numero2, String operacion) {
+        this.numero1 = numero1;
+        this.numero2 = numero2;
+        this.operacion = operacion;
     }
 
-    public int suma() {
-        return this.num1 + this.num2;
-    }
-
-
-    public int resta() {
-        return this.num1 - this.num2;
-    }
-
-     public class PruebaCalculadora {
-    public static void main(String[] args) {
-        Calculadora calc = new Calculadora(5, 3);
-        System.out.println(calc.suma());
-    }
-}
-    public int multiplicar() {
-        return this.num1 * this.num2;
-    }
-
-    public double dividir() {
-        if (this.num2 != 0) {
-            return (double) this.num1 / this.num2;
-        } else {
-            throw new IllegalArgumentException("Divisor cannot be zero");
+    //Realiza la operación
+    public void realizarOperacion() {
+        switch (operacion) {
+            case "+":
+                suma();
+                break;
+            case "-":
+                resta();
+                break;
+            case "*":
+                multiplicacion();
+                break;
+            case "/":
+                division();
+                break;
+            default:
+                System.out.println("Operación no válida");
         }
+    }
+
+    private void suma() {
+        resultado = numero1 + numero2;
+    }
+
+    private void resta() {
+        resultado = numero1 - numero2;
+    }
+  
+    private void multiplicacion() {
+        resultado = numero1 * numero2;
+    }
+
+    private void division() {
+        resultado = numero1 / numero2;
+    }
+
+    // En Calculadora.java
+// ...
+
+switch (operacion) {
+    // ...
+    case "%":
+        modulo();
+        break;
+    // ...
+}
+
+// ...
+
+private void modulo() {
+    resultado = numero1 % numero2;
+}
+
+// ...
+
+    public double getResultado() {
+        return resultado;
     }
 }
